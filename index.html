@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(https://edukasyon-production.s3.amazonaws.com/uploads/facility/image/2416/Annex-Facade-1024x683.jpg);
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #333;
+      color: white;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <marquee scrollamount="20"><h1>3 ARRAY METHODS</h1></marquee>
+    </header>
+    <div class="container">
+        <div class="box" id="join">
+            <h2>join()</h2>
+            <button onclick="joinParts()">Click Me</button>
+        </div>
+        <div class="box" id="delete">
+            <h2>delete()</h2>
+            <button onclick="deletePart()">Click Me</button>
+        </div>
+        <div class="box" id="concat">
+            <h2>concat()</h2>
+            <button onclick="concatParts()">Click Me</button>
+        </div>    
+    </div>
+    
+    <script>
+        let computerParts = ['CPU', 'GPU', 'RAM', 'SSD', 'HDD', 'Power Supply', 'Case', 'Monitor', 'Keyboard'];
+
+        function joinParts() {
+            computerParts.push("Mother Board");
+            alert("Updated Computer Parts: " + computerParts.join(', '));
+        }
+
+        function deletePart() {
+          delete computerParts[0];
+          alert("Deleted Computer Parts: " + computerParts.join[0]);
+        }
+
+        function concatParts() {
+          let moreParts = ['Mouse', 'Speaker'];
+          let allParts = computerParts.concat(moreParts);
+          alert("" + allParts.join(' - '));
+        }
+    </script>
+
+    <footer>
+        <p>© 2023 ARRAY METHODS</p>
+    </footer>
+
+</body>
+</html>
